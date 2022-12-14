@@ -1,9 +1,13 @@
 import csv
+import os
+
+
+# Path for the source data
+csvpath=os.path.join('Resources','budget_data.csv')
 
 # # Read file from budget_date.csv file
 
-
-with open('budget_data.csv', newline='') as f:
+with open(csvpath, newline='') as f:
     reader = csv.reader(f)
     budgetdata = list(reader)
 
@@ -78,8 +82,10 @@ print (f"Greatest Decrease in Profits: {date_max_dec_profit} (${max_dec_profit})
 
 #### In File summary Writing
 
+#Output path information \analysis\results.txt
+output_path=os.path.join('analysis','results.txt')
 
-file = open("results.txt","w")
+file = open(output_path,"w")
 
 
 file.write ("Financial Analysis\n")

@@ -1,9 +1,10 @@
 import csv
 import os
 
+# Path for the source data
 csvpath=os.path.join('Resources','election_data.csv')
 
-# # Read file from budget_date.csv file
+# # Read file from election_data.csv file
 
 
 with open(csvpath, newline='') as f:
@@ -13,8 +14,8 @@ with open(csvpath, newline='') as f:
 
 # print(election_data)
 
-# Ballot_ID_list contains the list with ballot IDs 
-# County_list contains the list with Counties where election votes took place
+# Ballot_ID_list contains the list with ballot IDs - Available but not required for calculations
+# County_list contains the list with Counties where election votes took place - Available but not required for calculations
 # Candidate_list contains the list of Candidates that obtained a vote
 
 Ballot_ID_list =[]
@@ -100,6 +101,7 @@ print ("-------------------------\n")
 
 #### In File summary Writing
 
+#Output path information \analysis\results.txt
 output_path=os.path.join('analysis','results.txt')
 
 file = open(output_path,"w")
