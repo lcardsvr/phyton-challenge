@@ -1,16 +1,19 @@
 import csv
+import os
+
+csvpath=os.path.join('Resources','election_data.csv')
 
 # # Read file from budget_date.csv file
 
 
-with open('election_data.csv', newline='') as f:
+with open(csvpath, newline='') as f:
     reader = csv.reader(f)
     election_data = list(reader)
 
 
 # print(election_data)
 
-# Ballot_ID_list contains the list with ballot IDs
+# Ballot_ID_list contains the list with ballot IDs 
 # County_list contains the list with Counties where election votes took place
 # Candidate_list contains the list of Candidates that obtained a vote
 
@@ -84,10 +87,12 @@ print ("-------------------------\n")
 print (f"Total Votes: {total_votes}\n")
 print ("-------------------------\n")
 
+## Loop to get Candidate with his/her vote percetange and total votes
+
 for i in range(num_candidates):
     print (f"{candidates[i]}: {vote_percentage[i]:.3f}% ({votes[i]})\n")
 
-
+## Gets the candidates with the maximum number of votes as the winner
 print ("-------------------------\n")
 print (f"Winner: {candidates[pos_winner]}\n")
 print ("-------------------------\n")
@@ -95,21 +100,24 @@ print ("-------------------------\n")
 
 #### In File summary Writing
 
-file = open("results.txt","w")
+output_path=os.path.join('analysis','results.txt')
+
+file = open(output_path,"w")
 
 file.write ("Election Results\n")
 file.write ("-------------------------\n")
 file.write (f"Total Votes: {total_votes}\n")
 file.write ("-------------------------\n")
 
+## Loop to get Candidate with his/her vote percetange and total votes
+
 for i in range(num_candidates):
     file.write (f"{candidates[i]}: {vote_percentage[i]:.3f}% ({votes[i]})\n")
 
-
+## Gets the candidates with the maximum number of votes as the winner
 file.write ("-------------------------\n")
 file.write (f"Winner: {candidates[pos_winner]}\n")
 file.write ("-------------------------\n")
 
 file.close()
 
-print ("rm results.txt")
