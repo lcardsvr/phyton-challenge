@@ -41,10 +41,10 @@ The code works as follows:
 
 12. The output result file is created under analysis\results.txt
 
-![PyBank_Solution](/PyBank/analysis/results.txt)
+![PyBank_Solution](PyBank_Result.PNG)
 
 
-## Notes on PyBank
+## Notes on PyPoll
 
 The code works as follows:
 
@@ -68,7 +68,7 @@ The code works as follows:
 
 8. Following the same idea in point 7 the results file is created under analysis\results.txt
 
-![PyBank_Solution](/PyPoll/analysis/results.txt)
+![PyPoll_Solution](PyPoll_Result.PNG)
 
 
 ## Submission
