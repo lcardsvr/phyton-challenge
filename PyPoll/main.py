@@ -78,8 +78,6 @@ for vote in votes:
 # The position of the winner in the list is where the maximum percentage is found
 pos_winner = vote_percentage.index(max(vote_percentage))
 
-print (pos_winner)
-
 
 ## In screen summary
 
